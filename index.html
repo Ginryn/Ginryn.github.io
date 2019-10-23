@@ -304,75 +304,10 @@
       
         
           
-            <p>import mysql.connector</p>
-<p>#==Written by Zhejanz 2019.10.24==#</p>
-<p>#———–ENVIRONMENT↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓#</p>
-<h1 id="Python-3-7-5-x64"><a href="#Python-3-7-5-x64" class="headerlink" title="Python 3.7.5 x64"></a>Python 3.7.5 x64</h1><h1 id="mySQL-8-0-18-0-amp-amp-mySQL-Connector-Python-8-0-18"><a href="#mySQL-8-0-18-0-amp-amp-mySQL-Connector-Python-8-0-18" class="headerlink" title="mySQL 8.0.18.0 &amp;&amp; mySQL-Connector-Python 8.0.18"></a>mySQL 8.0.18.0 &amp;&amp; mySQL-Connector-Python 8.0.18</h1><p>#————ENVIRONMENT↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑#</p>
-<p>#————CODE TEST PASSED———–#</p>
-<p>#————-COMMENTS ADDED————#</p>
-<p>#—–SYNC ON GitHub.IO © Copyright—–#<br>class DBOP():</p>
-<pre><code>def __init__(self):
-    # 使用mysql.connector连接数据库
-    self.conn = mysql.connector.connect(
-            host=&quot;localhost&quot;,
-            user=&quot;root&quot;,
-            password=&quot;123456&quot;,
-            use_unicode=True
-            )
+            <p><em>#==Written by Zhejanz 2019.10.24==#</em><br><em>#———–ENVIRONMENT↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓#</em><br><em># Python 3.7.5 x64</em><br><em># mySQL 8.0.18.0 &amp;&amp; mySQL-Connector-Python 8.0.18</em><br><em>#————ENVIRONMENT↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑#</em><br><em>#————CODE TEST PASSED———–#</em><br><em>#————-COMMENTS ADDED————#</em><br><em>#—–SYNC ON GitHub.IO © Copyright—–#</em></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> mysql.connector</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DBOP</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># 使用mysql.connector连接数据库</span></span><br><span class="line">        self.conn = mysql.connector.connect(</span><br><span class="line">                host=<span class="string">"localhost"</span>,</span><br><span class="line">                user=<span class="string">"root"</span>,</span><br><span class="line">                password=<span class="string">"123456"</span>,</span><br><span class="line">                use_unicode=<span class="literal">True</span></span><br><span class="line">                )</span><br><span class="line"></span><br><span class="line">        self.cursor = self.conn.cursor()</span><br><span class="line">        <span class="comment"># 若test数据库不存在则创建一个test数据库</span></span><br><span class="line">        self.cursor.execute(<span class="string">"CREATE DATABASE IF NOT EXISTS test"</span>)</span><br><span class="line"></span><br><span class="line">        self.cursor.execute(<span class="string">"USE test"</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># #检查是否当前数据库正确</span></span><br><span class="line">        <span class="comment"># self.cursor.execute("select DATABASE()")</span></span><br><span class="line">        <span class="comment"># self.CurrentDB = self.cursor.fetchone()</span></span><br><span class="line">        <span class="comment"># print("current database is %s" % self.CurrentDB)</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 若test表不存在则创建一个test表</span></span><br><span class="line">        self.cursor.execute(<span class="string">"CREATE TABLE IF NOT EXISTS test(name VARCHAR(255),num INT(20));"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#增加数据方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addOP</span><span class="params">(self,name,num)</span>:</span></span><br><span class="line">        self.cursor.execute(<span class="string">"INSERT INTO test VALUES('%s',%d)"</span> % (name,num))</span><br><span class="line">        self.conn.commit()   <span class="comment"># DDL语言需要手动commit</span></span><br><span class="line">    <span class="comment">#删除数据方法（可使用单一参数确定name，或者双参数同时确定name和num键匹配的数据）</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">delOP</span><span class="params">(self,name,*num)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> num == (()):</span><br><span class="line">            self.cursor.execute(<span class="string">"DELETE FROM test WHERE name='"</span> + name +<span class="string">"'"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.cursor.execute(<span class="string">"DELETE FROM test WHERE name='%s'AND num = %d"</span> % (name,int(num[<span class="number">0</span>])))</span><br><span class="line">        self.conn.commit()</span><br><span class="line"></span><br><span class="line">    <span class="comment">#修改数据方法（可使用单一参数确定name，或者双参数同时确定name和num键匹配的数据）</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">alterOP</span><span class="params">(self,name,anum,*num)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> num ==(()):</span><br><span class="line">            self.cursor.execute(<span class="string">"UPDATE test SET num = %d WHERE name ='%s'"</span>%(anum,name))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.cursor.execute(<span class="string">"UPDATE test SET num = %d WHERE name ='%s' AND num = %d"</span>%(anum,name,int(num[<span class="number">0</span>])))</span><br><span class="line">        self.conn.commit()  </span><br><span class="line"></span><br><span class="line">    <span class="comment">#查找数据方法（可使用单一参数确定name，或者双参数同时确定name和num键匹配的数据）</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findOP</span><span class="params">(self,name,*num)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> num ==(()):</span><br><span class="line">            self.cursor.execute(<span class="string">"SELECT * FROM test WHERE name = '%s'"</span> %name)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.cursor.execute(<span class="string">"SELECT * FROM test WHERE name = '%s' AND num = %d"</span> %(name,int(num[<span class="number">0</span>])))</span><br><span class="line">        data = self.cursor.fetchall()</span><br><span class="line">        print(data)</span><br><span class="line">    <span class="comment">#查找所有的数据</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findALL</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.cursor.execute(<span class="string">"SELECT * FROM test"</span>)</span><br><span class="line">        data = self.cursor.fetchall()</span><br><span class="line">        print(data)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用类中单一函数逐个测试↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓</span></span><br><span class="line"><span class="comment"># 定义一个对象</span></span><br><span class="line">a=DBOP()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 增  可通过navicat等工具或者查函数确定结果是否有效</span></span><br><span class="line">a.addOP(<span class="string">"测试2"</span>,<span class="number">222222</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删</span></span><br><span class="line">a.delOP(<span class="string">"aa"</span>)</span><br><span class="line">a.delOP(<span class="string">"测试2"</span>,<span class="string">"565656"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 改</span></span><br><span class="line"><span class="comment"># 顺序为要修改的数据原name，修改后的num值，原num值</span></span><br><span class="line">a.alterOP(<span class="string">"测试2"</span>,<span class="number">444444</span>,<span class="number">222223</span>)</span><br><span class="line">a.alterOP(<span class="string">"测试3"</span>,<span class="number">444444</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查</span></span><br><span class="line">a.findOP(<span class="string">"测试3"</span>)</span><br><span class="line">a.findOP(<span class="string">"测试2"</span>,<span class="number">587587589</span>)</span><br><span class="line">a.findALL()</span><br><span class="line"></span><br><span class="line">a.cursor.close()</span><br><span class="line">a.conn.close()</span><br><span class="line"><span class="comment"># 调用类中单一函数逐个测试↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑</span></span><br></pre></td></tr></table></figure>
 
-    self.cursor = self.conn.cursor()
-    # 若test数据库不存在则创建一个test数据库
-    self.cursor.execute(&quot;CREATE DATABASE IF NOT EXISTS test&quot;)
 
-    self.cursor.execute(&quot;USE test&quot;)
-
-    # #检查是否当前数据库正确
-    # self.cursor.execute(&quot;select DATABASE()&quot;)
-    # self.CurrentDB = self.cursor.fetchone()
-    # print(&quot;current database is %s&quot; % self.CurrentDB)
-
-    # 若test表不存在则创建一个test表
-    self.cursor.execute(&quot;CREATE TABLE IF NOT EXISTS test(name VARCHAR(255),num INT(20));&quot;)
-
-#增加数据方法
-def addOP(self,name,num):
-    self.cursor.execute(&quot;INSERT INTO test VALUES(&apos;%s&apos;,%d)&quot; % (name,num))
-    self.conn.commit()   # DDL语言需要手动commit
-#删除数据方法（可使用单一参数确定name，或者双参数同时确定name和num键匹配的数据）
-def delOP(self,name,*num):
-    if num == (()):
-        self.cursor.execute(&quot;DELETE FROM test WHERE name=&apos;&quot; + name +&quot;&apos;&quot;)
-    else:
-        self.cursor.execute(&quot;DELETE FROM test WHERE name=&apos;%s&apos;AND num = %d&quot; % (name,int(num[0])))
-    self.conn.commit()
-
-#修改数据方法（可使用单一参数确定name，或者双参数同时确定name和num键匹配的数据）
-def alterOP(self,name,anum,*num):
-    if num ==(()):
-        self.cursor.execute(&quot;UPDATE test SET num = %d WHERE name =&apos;%s&apos;&quot;%(anum,name))
-    else:
-        self.cursor.execute(&quot;UPDATE test SET num = %d WHERE name =&apos;%s&apos; AND num = %d&quot;%(anum,name,int(num[0])))
-    self.conn.commit()  
-
-#查找数据方法（可使用单一参数确定name，或者双参数同时确定name和num键匹配的数据）
-def findOP(self,name,*num):
-    if num ==(()):
-        self.cursor.execute(&quot;SELECT * FROM test WHERE name = &apos;%s&apos;&quot; %name)
-    else:
-        self.cursor.execute(&quot;SELECT * FROM test WHERE name = &apos;%s&apos; AND num = %d&quot; %(name,int(num[0])))
-    data = self.cursor.fetchall()
-    print(data)
-#查找所有的数据
-def findALL(self):
-    self.cursor.execute(&quot;SELECT * FROM test&quot;)
-    data = self.cursor.fetchall()
-    print(data)</code></pre><h1 id="调用类中单一函数逐个测试↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓"><a href="#调用类中单一函数逐个测试↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓" class="headerlink" title="调用类中单一函数逐个测试↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓"></a>调用类中单一函数逐个测试↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓</h1><h1 id="定义一个对象"><a href="#定义一个对象" class="headerlink" title="定义一个对象"></a>定义一个对象</h1><p>a=DBOP()</p>
-<h1 id="增-可通过navicat等工具或者查函数确定结果是否有效"><a href="#增-可通过navicat等工具或者查函数确定结果是否有效" class="headerlink" title="增  可通过navicat等工具或者查函数确定结果是否有效"></a>增  可通过navicat等工具或者查函数确定结果是否有效</h1><p>a.addOP(“测试2”,222222)</p>
-<h1 id="删"><a href="#删" class="headerlink" title="删"></a>删</h1><p>a.delOP(“aa”)<br>a.delOP(“测试2”,”565656”)</p>
-<h1 id="改"><a href="#改" class="headerlink" title="改"></a>改</h1><h1 id="顺序为要修改的数据原name，修改后的num值，原num值"><a href="#顺序为要修改的数据原name，修改后的num值，原num值" class="headerlink" title="顺序为要修改的数据原name，修改后的num值，原num值"></a>顺序为要修改的数据原name，修改后的num值，原num值</h1><p>a.alterOP(“测试2”,444444,222223)<br>a.alterOP(“测试3”,444444)</p>
-<h1 id="查"><a href="#查" class="headerlink" title="查"></a>查</h1><p>a.findOP(“测试3”)<br>a.findOP(“测试2”,587587589)<br>a.findALL()</p>
-<p>a.cursor.close()<br>a.conn.close()</p>
-<h1 id="调用类中单一函数逐个测试↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑"><a href="#调用类中单一函数逐个测试↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑" class="headerlink" title="调用类中单一函数逐个测试↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑"></a>调用类中单一函数逐个测试↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑</h1>
           
         
       
